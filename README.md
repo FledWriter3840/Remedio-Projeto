@@ -98,9 +98,9 @@ Para acessar as rotas protegidas, é necessário enviar o token gerado no login 
 
 ## 👨‍💻 Autor
 
-**Henrique Barros - RA: r010082**
-**Matheus de Souza Soares - RA: N064943**
-**Leonardo Diogo Buzelin Julio - RA: G790GB9**
+**Matheus de Souza Soares - RA: N064943**  
+**Henrique Barros - RA: r010082**  
+**Leonardo Diogo Buzelin Julio - RA: G790GB9**  
 **Luan Martiniano Rocha - RA: R029EB8**
 
 ---
