@@ -1,70 +1,111 @@
-# Getting Started with Create React App
+# 💊 Projeto Remédio API
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Node.js Version](https://img.shields.io/badge/node-%3E%3D%2014.0.0-brightgreen)](https://nodejs.org/)
+[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
 
-## Available Scripts
+Uma API robusta desenvolvida em **Node.js** para o gerenciamento centralizado de medicamentos e controle de usuários. O sistema conta com autenticação segura e diferentes níveis de acesso.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Funcionalidades
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* **Autenticação Segura:** Login utilizando **JWT (JSON Web Token)**.
+* **Segurança de Dados:** Criptografia de senhas com **Bcrypt**.
+* **Controle de Acesso:** Gerenciamento por perfis de usuário (Hierarquia).
+* **Persistência:** Integração com banco de dados **MySQL** via pool de conexões.
+* **Arquitetura:** Design de API RESTful escalável.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🛠️ Tecnologias e Ferramentas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+O projeto foi construído utilizando o seguinte ecossistema:
 
-### `npm run build`
+* **Runtime:** [Node.js](https://nodejs.org/)
+* **Framework Web:** [Express](https://expressjs.com/)
+* **Banco de Dados:** [MySQL](https://www.mysql.com/)
+* **Segurança:** JWT & Bcrypt
+* **Middleware:** CORS
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📂 Estrutura do Projeto
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```text
+REMEDIO PROJETO/
+├── server.js                 # Ponto de entrada da aplicação
+├── package.json              # Manifesto e dependências
+├── banco_de_dados_remedio.sql # Script de inicialização SQL
+└── .gitignore                # Arquivos ignorados pelo Git
+```
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## ⚙️ Configuração e Instalação
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Siga os passos abaixo para rodar o projeto localmente:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 1. Clonar e Instalar
+```bash
+# Clone o repositório
+git clone https://github.com/seu-usuario/seu-repositorio.git
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Acesse a pasta
+cd REMEDIO-PROJETO
 
-## Learn More
+# Instale as dependências
+npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 2. Banco de Dados
+Certifique-se de ter um servidor MySQL rodando. Execute o script `banco_de_dados_remedio.sql` para criar as tabelas necessárias.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 3. Variáveis de Ambiente
+Crie um arquivo `.env` na raiz do projeto com as seguintes chaves:
+```env
+DB_HOST=localhost
+DB_USER=seu_usuario
+DB_PASS=sua_senha
+DB_NAME=remedio_db
+JWT_SECRET=sua_chave_mestra
+```
 
-### Code Splitting
+### 4. Executar
+```bash
+npm start
+```
+A API estará disponível em: `http://localhost:3000`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 🔐 Segurança e Autenticação
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Para acessar as rotas protegidas, é necessário enviar o token gerado no login através do Header:
 
-### Making a Progressive Web App
+| Header | Valor |
+| :--- | :--- |
+| **Authorization** | `Bearer SEU_TOKEN_AQUI` |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 📌 Recomendações Importantes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1.  **Produção:** Nunca exponha senhas ou segredos JWT em repositórios públicos.
+2.  **Git:** O diretório `node_modules` está configurado para ser ignorado. Caso não esteja, adicione-o ao seu `.gitignore`.
+3.  **Ambiente:** Utilize sempre variáveis de ambiente para dados sensíveis.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 👨‍💻 Autor
 
-### `npm run build` fails to minify
+**Henrique Barros - RA: r010082**
+**Matheus de Souza Soares - RA: N064943**
+**Leonardo Diogo Buzelin Julio - RA: G790GB9**
+**Luan Martiniano Rocha - RA: R029EB8 **
+*Desenvolvedor e Microempreendedor*
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## 📄 Licença
+
+Este projeto está sob a licença **ISC**.
