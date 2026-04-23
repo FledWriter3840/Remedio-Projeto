@@ -105,6 +105,9 @@ Para acessar as rotas protegidas, é necessário enviar o token gerado no login 
 *Desenvolvedor e Microempreendedor*
 
 ---
+## 👨‍🏫 Orientação / Professor
+* **Andre Muniz** ([@agdelira](https://github.com/agdelira))
+---
 
 ## 📄 Licença
 
